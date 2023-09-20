@@ -4,7 +4,8 @@
 -   Sửa đổi giao diện: Profile, Order, Payment
 -   Tối ưu navigation
 -   Animation
-- Responsive
+-   Responsive
+-   Admin Page
 # 2 Chức năng
 -   Private route
 -   Amin: Quản lý sản phẩm, thêm - sửa - xóa, thống kê
