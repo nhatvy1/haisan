@@ -58,6 +58,7 @@ export default function Cart() {
                             discount={cart.discount}
                             unit={cart.unit}
                             quantity={cart.quantity}
+                            images={cart.images}
                             />
                     ))}
                 </div>

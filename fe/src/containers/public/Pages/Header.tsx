@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { RootState } from '../../../store/store';
 import { User } from '../../../components';
 import { getTotals } from '../../../store/slices/cartSlice';
+import { BsFillTrashFill } from 'react-icons/bs'
+import CartHover from '../../../components/Cart/CartHover';
 
 export default function Header() {
     const dispatch = useDispatch()
@@ -20,6 +22,9 @@ export default function Header() {
     useEffect(()=> {
         dispatch(getTotals())
     }, [cart, dispatch])
+
+
+
     return (
         <div className="bg-header max-md:p-[5px] max-md:relative">
             <div className="container mx-auto py-4">
@@ -111,25 +116,26 @@ export default function Header() {
                                 </Link>
                             }
                         </div>
-                        <Link to={'/cart'}>
-                            <div className="box flex flex-col items-center justify-center relative">
-                                <div className=" w-fit">
-                                    <img
-                                        alt=""
-                                        src="/images/bag.svg"
-                                        height={24}
-                                        width={24}
-                                    />
-                                    <div className="absolute flex justify-center items-center top-0 right-[5px] w-[18px] rounded-full px-1 py-[2px] text-center text-[10px] font-medium not-italic text-white bg-[#D72C0D]">
-                                        {cartTotalQuantity}
+                        <div className="relative box flex flex-col items-center justify-center group">
+                            <Link to={'/cart'}>
+                                    <div className=" w-fit">
+                                        <img
+                                            alt=""
+                                            src="/images/bag.svg"
+                                            height={24}
+                                            width={24}
+                                        />
+                                        <div className="absolute flex justify-center items-center top-0 right-[5px] w-[18px] rounded-full px-1 py-[2px] text-center text-[10px] font-medium not-italic text-white bg-[#D72C0D]">
+                                            {cartTotalQuantity}
+                                        </div>
                                     </div>
-                                </div>
-                                <p className="text-white text-sm12 font-normal leading-5">
-                                    {' '}
-                                    Giỏ hàng
-                                </p>
-                            </div>
-                        </Link>
+                                    <p className="text-white text-sm12 font-normal leading-5">
+                                        {' '}
+                                        Giỏ hàng
+                                    </p>
+                            </Link>
+                            <CartHover />
+                        </div>
                     </div>
                 </div>
             </div>

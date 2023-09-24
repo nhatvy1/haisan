@@ -17,7 +17,6 @@ const HomePage = () => {
     const productLists = useSelector(
         (state: RootState) => state.productBestSell.productsList,
     );
-    console.log('Check product best selling: ', productLists);
 
     useEffect(() => {
         dispatch(getProductBestSelling());

@@ -42,6 +42,7 @@ const cartSlice = createSlice({
                     discount: action.payload.discount || 0,
                     unit: action.payload.unit || '',
                     quantity: 1,
+                    images: action.payload.images || ''
                 };
                 state.cartList.push(tempProductItem);
                 toast.info(`Thêm 1 ${action.payload.name} vào giỏ hàng`, {

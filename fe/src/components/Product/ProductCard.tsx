@@ -20,6 +20,7 @@ export interface ProductProp {
 const ProductCard = (props: ProductProp) => {
     const dispatch = useDispatch();
     const handleAddToCart = (product: ProductProp) => {
+        console.log('Add product: ', product)
         dispatch(addToCart(product));
     };
 

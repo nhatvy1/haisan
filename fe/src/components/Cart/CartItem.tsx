@@ -15,6 +15,7 @@ interface CartItemProps {
     discount?: number;
     unit?: string;
     quantity?: number;
+    images?: string
 }
 
 const CartItem = (props: CartItemProps) => {
@@ -39,7 +40,7 @@ const CartItem = (props: CartItemProps) => {
                 <div className="flex">
                     <div className="w-[100px] h-[100px] border">
                         <img
-                            src="https://res.cloudinary.com/metavere/image/upload/v1692979847/tuoi_owzole.jpg"
+                            src={props.images}
                             alt="Loi"
                         />
                     </div>
